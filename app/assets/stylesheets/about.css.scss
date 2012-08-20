@@ -1,0 +1,39 @@
+.about_page {
+  h1 {
+    font-size: 4em;
+    letter-spacing: 0px;
+  }
+
+  h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+
+  }
+
+  h3 {
+    text-align: center;
+    .number {
+      font-size: 100%;
+    }
+  }
+  .pUnderH {
+    font-size: 180%;
+    line-height: 1.2;
+  }
+  .span4 {
+    p {
+      text-align:justify;
+      text-justify:inter-word;
+      //font-size: 100%;
+      //line-height: 1.2
+    }
+  }
+
+  dt {
+    font-size: 120%;
+  }
+  
+
+}

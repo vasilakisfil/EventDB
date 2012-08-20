@@ -1,11 +1,17 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "sample app", '/static_pages', id: "logo" %>
+      <%= link_to "EventDB", root_path, id: "logo" %>
+      <div class="mytopcontainer">
+        <%= link_to "events", '#', class: "sublogo" %>
+        <%= link_to "coinsidence", '#', class: "sublogo" %>
+        <%= link_to "history", '#', class: "sublogo" %>
+      </div>
+      
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home",    root_path %></li>
-          <li><%= link_to "Help",    help_path %></li>
+          <li><%= link_to "About",    about_path %></li>
           <li><%= link_to "Sign in", '#' %></li>
         </ul>
       </nav>

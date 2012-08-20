@@ -1,10 +1,7 @@
-@import "bootstrap";
-
-@import "bootstrap";
 
 /* mixins, variables, etc. */
-
 $grayMediumLight: #eaeaea;
+
 
 /* universal */
 
@@ -24,38 +21,9 @@ textarea {
   resize: vertical;
 }
 
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-/* typography */
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
   text-align: center;
-}
-
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
 }
 
 
@@ -64,9 +32,10 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
+  padding-right: 15px;
   font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
+  color: grey;
+  font-variant: small-caps;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -76,6 +45,27 @@ p {
     text-decoration: none;
   }
 }
+
+.mytopcontainer {
+ text-align: center;
+}
+
+.sublogo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1em;
+  color: grey;
+  letter-spacing: 0px;
+  padding-top: 16px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
 
 /* footer */
 
@@ -102,4 +92,3 @@ footer {
     }
   }
 }
-

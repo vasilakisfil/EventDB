@@ -1,12 +1,6 @@
 
 .home_page {
 
-    /* typography */
-
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1;
-    }
-
     h1 {
       font-size: 3em;
       letter-spacing: -2px;
@@ -14,17 +8,12 @@
       text-align: center;
     }
 
-    h2 {
+    #slogan {
       font-size: 1.7em;
       margin-bottom: 30px;
       text-align: center;
       font-weight: normal;
       color: $grayLight;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.7em;
     }
 
     .center {
@@ -47,3 +36,4 @@
     }
   }
 }
+

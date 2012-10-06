@@ -1,3 +1,52 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+.home_page {
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    #slogan {
+      font-size: 1.7em;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: normal;
+      color: $grayLight;
+    }
+
+    .center {
+      text-align: center;
+      h1 {
+        margin-bottom: 10px;
+      }
+    }
+
+  #map_canvas {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .figure {
+    p {
+      padding-top:7px;
+      text-align:center;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.about_page {
+  h2 {
+    margin-bottom: 10px;
+  }
+}

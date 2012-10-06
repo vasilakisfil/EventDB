@@ -1,6 +1,30 @@
 <div class="usersController">
 <% provide(:title, 'Sign up') %>
 
-<h1> Sign up <h1>
+<h1> Sign up </h1>
+ 
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
 
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name, :placeholder => "Emma Browns" %>
+
+      <%= f.label :email, "Email" %>
+      <%= f.text_field :email, :placeholder => "emmabrowns@example.com" %>
+
+      <%= f.label :username, "Username (optional)" %>
+      <%= f.text_field :username, :placeholder => "emmy" %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, :placeholder => "A strong password would resist in guessing or brute force attacks" %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, :placeholder => "A strong password would resist in guessing or brute force attacks" %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
 </div>
+

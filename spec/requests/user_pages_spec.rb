@@ -106,6 +106,21 @@ describe "User pages" do
 
     it { should have_selector('title', text: 'All users') }
     it { should have_selector('h1', text: 'All users') }
+    it { should have_content('Search user') }
+    it { should have_button('Search') }
+
+    describe "search users" do
+      let(:search_user) {  FactoryGirl.create(:user) }
+      let(:notsearch_user) { FactoryGirl.create(:user) }
+      before do
+        fill_in "search", with: search_user.name
+        click_button "Search"
+      end
+
+      it { should have_link(search_user.name, href: user_path(search_user)) }
+      it { should_not have_link(notsearch_user.name) }
+
+    end
 
     describe "pagination" do
 

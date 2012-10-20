@@ -1,0 +1,11 @@
+.static_pages.home_page
+  - provide(:title, 'EventDB')
+  .center.hero-unit
+    %h1 EventDB
+    %p#slogan A new multifunctional search engine based on people's experiences !
+    = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
+  .row
+    .span12
+      #map_canvas
+    .figure
+      %p See how events relate with each other!

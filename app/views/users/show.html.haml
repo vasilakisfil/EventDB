@@ -2,7 +2,21 @@
 .users_page
   .row
     %aside.span4
-      %section
-        %h1
-          = gravatar_for @user
-          = @user.name
+      - if !signed_in?
+        %section
+          %h1
+            = gravatar_for @user
+            = @user.name
+      - else 
+        %section
+          = render 'shared/user_info'
+        %section 
+          = render 'shared/micropost_form'
+
+    .span4
+      .justified
+        - if @user.microposts.any?
+          %h3 Microposts (#{@user.microposts.count})
+          %ol.microposts
+            = render @microposts
+          = will_paginate @microposts

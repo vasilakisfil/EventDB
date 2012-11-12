@@ -1,0 +1,8 @@
+= form_for(@micropost) do |f|
+  = render 'shared/error_messages', object: f.object
+  .field
+    = f.text_area :title, size: "40x1", placeholder: "Micropost title"
+    = f.text_area :content, size: "40x10", placeholder: "Describe your experience! (optional)"
+    = f.number_field :lat, placeholder: "Latitude"
+    = f.number_field :lon, placeholder: "Longitude"
+  = f.submit "Post", class: "btn btn-large btn-primary"

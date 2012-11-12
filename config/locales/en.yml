@@ -3,3 +3,16 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      user:
+        password_digest: "Password"
+
+en:
+  activerecord:
+    attributes:
+      micropost:
+        lat: "Latitude coordinate"
+        lon: "Longitude coordinate"

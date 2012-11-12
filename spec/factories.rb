@@ -10,4 +10,12 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  factory :micropost do
+    title "The title"
+    content "The content"
+    lat { rand(0..1.8)*100 - 90 }
+    lon { rand(0..3.60)*100 -180 }
+    user
+  end
 end

@@ -21,6 +21,13 @@ module SessionsHelper
     user == current_user
   end
 
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
+  end
+
   def sign_out
     self.current_user = nil
     cookies.delete(:remember_token)
@@ -34,4 +41,19 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
+
+  def renderActionInOtherController(controller,action,params)
+    controller.class_eval{
+      def params=(params); @params = params end
+      def params; @params end
+    }
+    c = controller.new
+    c.request = @_request
+    c.response = @_response
+    c.params = params
+    c.send(action)
+    c.response.body
+  end
+
+
 end

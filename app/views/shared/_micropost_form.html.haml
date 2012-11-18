@@ -1,8 +1,10 @@
 = form_for(@micropost) do |f|
   = render 'shared/error_messages', object: f.object
   .field
+    %h4 Set the location the event took place!
+    .map_canvas#mini_map
     = f.text_area :title, size: "40x1", placeholder: "Micropost title"
     = f.text_area :content, size: "40x10", placeholder: "Describe your experience! (optional)"
-    = f.number_field :lat, placeholder: "Latitude"
-    = f.number_field :lon, placeholder: "Longitude"
+    = f.number_field :lat, placeholder: "Latitude", step: 0.00000000000001, max: 90, min: -90
+    = f.number_field :lon, placeholder: "Longitude", step: 0.00000000000001, max: 180, min: -180
   = f.submit "Post", class: "btn btn-large btn-primary"

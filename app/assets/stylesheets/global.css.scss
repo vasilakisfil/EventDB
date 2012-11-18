@@ -10,6 +10,11 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
+//it solves bootstrap Gmaps issues
+img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
+    max-width: 99999px;
+}
+
 html {
   overflow-y: scroll;
 }

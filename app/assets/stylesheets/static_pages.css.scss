@@ -30,15 +30,15 @@
       }
     }
 
-  #map_canvas {
+  .map_canvas#main_map {
     height: 400px;
     width: 100%;
   }
   
   .figure {
     p {
-      padding-top:7px;
-      text-align:center;
+      padding-top: 7px;
+      text-align: center;
       font-weight: bold;
     }
   }

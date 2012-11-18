@@ -49,6 +49,12 @@ EventDB was built following the process of Test Driven Development(TDD), that is
 almost everything. The code is written using Ruby on Rails framework with a couple
 more tools in order to facilitate the development:
 
+**Rspec** and **Capyvara** for test driven development inside the Rails
+
+**Jasmine** for test driven development in the javascript section
+
+**Unobtrusive JavaScript** approach
+
 **SASS** (Syntactically Awesome Stylesheets) which is a CSS metalanguage offering a bunge of
 feature CSS don't have such as nesting, variables, functions, mixins and much more..
 

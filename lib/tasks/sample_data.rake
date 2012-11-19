@@ -6,8 +6,8 @@ namespace :db do
                  username: "exampleuser",
                  password: "foobar",
                  password_confirmation: "foobar")
-    admin = User.create!(name: "example user",
-                         email: "admin@admin.com",
+    admin = User.create!(name: "Filippos Vasilakis",
+                         email: "vasilakisfil@gmail.com",
                          password: "foobar",
                          password_confirmation: "foobar")
     admin.toggle!(:admin)

@@ -5,6 +5,7 @@ PhotosharingApp::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+  match '/home', to: 'static_pages#home'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete

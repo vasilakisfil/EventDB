@@ -53,11 +53,14 @@ more tools in order to facilitate the development:
 
 **Jasmine** for test driven development in the javascript section
 
-**Unobtrusive JavaScript** approach
-
 **SASS** (Syntactically Awesome Stylesheets) which is a CSS metalanguage offering a bunge of
 feature CSS don't have such as nesting, variables, functions, mixins and much more..
 
 **Twitter Bootstrap** framework in order to flavor the markup
 
-**HAML**  will be the markup language instead of eRuby that is included in rails in the next few commits.
+**HAML**  is used as markup language instead of eRuby that is included in rails in the next few commits.
+
+Strictly **Unibtrusive** javascript because otherwise things can get really ugnly. Also Modular Pattern is used
+followed by [this](http://www.dustindiaz.com/javascript-private-public-privileged/) post.
+
+**JSON** is used in order to pass data from ruby to javascript and back.

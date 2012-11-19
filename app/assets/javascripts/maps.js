@@ -5,7 +5,7 @@ GMAPS.mainMap = function() {
   function showPosition(position) {
     position = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     map.setCenter(position);
-
+/*
     var marker = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: position,
@@ -21,7 +21,44 @@ GMAPS.mainMap = function() {
       infowindow.open(map,marker);
     });
 
-    //infowindow.open(map,marker);
+    infowindow.open(map,marker);
+*/
+  }
+
+  function addMarkers() {
+    var jsonObject = {};
+
+    var xhr = new XMLHttpRequest();
+    xhr.open( "GET", "/home.json", true );
+    xhr.onreadystatechange = function () {
+      if ( xhr.readyState == 4 && xhr.status == 200 ) {
+        jsonObject = JSON.parse( xhr.responseText );
+        for (var i=0; i<jsonObject.length; i++) {
+          createMarker(jsonObject[i].title, jsonObject[i].content, jsonObject[i].lat, jsonObject[i].lon);
+        }
+      }
+    };
+    xhr.send(null);
+  }
+
+  function createMarker(Title, Content, Latitude, Longitude) {
+
+    var position = new google.maps.LatLng(Latitude, Longitude);
+    contentString = Title.bold() + "<br />" + Content;
+
+    var marker = new google.maps.Marker({
+      position: position,
+      title: Title,
+      map: map
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
 
   }
 
@@ -54,7 +91,12 @@ GMAPS.mainMap = function() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
       initAddress();
+      addMarkers();
     },
+
+    addMarkersToMap : function() {
+
+    }
   };
 }();
 

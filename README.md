@@ -69,7 +69,7 @@ followed by [this](http://www.dustindiaz.com/javascript-private-public-privilege
   * Add support for private, semi-private(public in friends) and public events
   * Add support for circles of friends
 * Add support for bitly urls in events
-* Add linkage capability among events [**urgent**]
+* **Urgent:** Add linkage capability among events
 * ...
 
 

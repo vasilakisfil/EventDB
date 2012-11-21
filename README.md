@@ -65,6 +65,7 @@ followed by [this](http://www.dustindiaz.com/javascript-private-public-privilege
 **JSON** is used in order to pass data from ruby to javascript and back.
 
 # To Do List
+* Add support for private messages
 * Add support for friends and followers
   * Add support for private, semi-private(public in friends) and public events
   * Add support for circles of friends

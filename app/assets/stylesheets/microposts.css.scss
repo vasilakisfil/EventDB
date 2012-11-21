@@ -40,3 +40,20 @@
     text-justify:inter-word;
   }
 }
+
+.microposts_page {
+  .map_canvas#mini_map {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 400px;
+    width: 100%;
+  }
+
+  .map_canvas#micro_map {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 400px;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,10 @@
+- provide(:title, @micropost.title)
+.microposts_page
+  .row
+    .span6.offset3
+      %h2= @micropost.title
+      %br/
+      .map_canvas#micro_map
+    .span8.offset2
+      %br/
+      %p= @micropost.content

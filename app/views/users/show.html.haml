@@ -12,8 +12,9 @@
       - else 
         %section
           = render 'shared/user_info'
-        %section 
-          = render 'shared/micropost_form'
+        - if current_user?(@user)
+          %section 
+            = render 'shared/micropost_form'
 
     .span4
       .justified

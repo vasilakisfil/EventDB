@@ -44,7 +44,7 @@ GMAPS.mainMap = function() {
   function createMarker(Name, Title, Content, Latitude, Longitude) {
 
     var position = new google.maps.LatLng(Latitude, Longitude);
-    contentString = "<h4>" + Name.bold() + "</h4>" + "<br />" + Title.bold() +
+    contentString = "<h4>" + Name.bold() + "</h4>" + "<br />" + Title.bold()
                     + "<br />" + Content;
 
     var marker = new google.maps.Marker({

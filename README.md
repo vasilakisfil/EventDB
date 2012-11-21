@@ -1,5 +1,7 @@
 # EventDB
 
+https://eventdb.herokuapp.com
+
 EventDB is a web application in which everyone can post anything. Although it
 could easily be transformed in a spam hoover, it features mechanisms that a
 case of a spam bot is avoided.

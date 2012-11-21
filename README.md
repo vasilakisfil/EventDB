@@ -70,6 +70,7 @@ followed by [this](http://www.adequatelygood.com/2010/3/JavaScript-Module-Patter
   * Add support for private(shown only to those who know the link), and public events
 * Add support for bitly urls in events
 * **Urgent:** Add linkage capability among events
+* **Urgent:** Add support to search events
 * ...
 
 

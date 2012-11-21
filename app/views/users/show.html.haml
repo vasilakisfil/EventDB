@@ -1,4 +1,6 @@
 - provide(:title, @user.name)
+- content_for :specific_scripts do
+  =javascript_include_tag "mini_map.js"
 .users_page
   .row
     %aside.span6

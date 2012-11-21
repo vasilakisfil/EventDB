@@ -1,5 +1,7 @@
+- provide(:title, 'EventDB')
+- content_for :specific_scripts do
+  =javascript_include_tag "main_map.js"
 .static_pages.home_page
-  - provide(:title, 'EventDB')
   .center.hero-unit
     %h1 EventDB
     %p#slogan A new multifunctional search engine based on people's experiences !

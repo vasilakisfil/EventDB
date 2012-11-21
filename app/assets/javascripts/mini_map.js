@@ -1,9 +1,39 @@
+var GMAPS = window.GMAPS || {};
 GMAPS.miniMap = function() {
   var map;
   var marker;
 
+  function createMap() {
+    map = new google.maps.Map(document.getElementById('mini_map'), {
+      zoom: 10,
+      panControl: true,
+      zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL
+      },
+      mapTypeControl: true,
+      scaleControl: true,
+      streetViewControl: true,
+      overviewMapControl: true,
+      scrollwheel: false,
+      center: new google.maps.LatLng(37.975327,23.728701),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+  }
+
+  function initAddress() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else {
+      position = new google.maps.LatLng(0, 0);
+      map.setCenter(position);
+    }
+  }
+
   function showPosition(position) {
-    position = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    position = new google.maps.LatLng(position.coords.latitude,
+                                      position.coords.longitude);
     map.setCenter(position);
 
     marker = new google.maps.Marker({
@@ -32,38 +62,12 @@ GMAPS.miniMap = function() {
       document.getElementById('micropost_lat').value = marker.getPosition().lat();
       document.getElementById('micropost_lon').value = marker.getPosition().lng();
     });
-
-
-  }
-
-  function initAddress() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    }
-    else {
-      position = new google.maps.LatLng(0, 0);
-      map.setCenter(position);
-    }
   }
 
   return {
   
     initMap : function() {
-      map = new google.maps.Map(document.getElementById('mini_map'), {
-        zoom: 10,
-        panControl: true,
-        zoomControl: true,
-        zoomControlOptions: {
-          style: google.maps.ZoomControlStyle.SMALL
-        },
-        mapTypeControl: true,
-        scaleControl: true,
-        streetViewControl: true,
-        overviewMapControl: true,
-        scrollwheel: false,
-        center: new google.maps.LatLng(37.975327,23.728701),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
+      createMap();
       initAddress();
     },
   };

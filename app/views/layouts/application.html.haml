@@ -5,6 +5,7 @@
     = stylesheet_link_tag    "application", media: "all"
     %script{:src => "https://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
     = javascript_include_tag "application"
+    = yield :specific_scripts
     = csrf_meta_tags
     = render 'layouts/shim'
   %body

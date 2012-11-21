@@ -60,15 +60,14 @@ feature CSS don't have such as nesting, variables, functions, mixins and much mo
 **HAML**  is used as markup language instead of eRuby that is included in rails in the next few commits.
 
 **Strictly Unibtrusive** javascript and AJAX because otherwise things can get really ugnly. Also Modular Pattern is used
-followed by [this](http://www.dustindiaz.com/javascript-private-public-privileged/) post.
+followed by [this](http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth) post.
 
 **JSON** is used in order to pass data from ruby to javascript and back.
 
 # To Do List
 * Add support for private messages
-* Add support for friends and followers
-  * Add support for private, semi-private(public in friends) and public events
-  * Add support for circles of friends
+* Add  private mechanisms
+  * Add support for private(shown only to those who know the link), and public events
 * Add support for bitly urls in events
 * **Urgent:** Add linkage capability among events
 * ...

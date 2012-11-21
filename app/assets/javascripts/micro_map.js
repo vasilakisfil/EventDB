@@ -1,11 +1,11 @@
 var GMAPS = window.GMAPS || {};
 GMAPS.microMap = function() {
   var map;
+  var jsonObject = {};
 
   function addMicropostMarker() {
     url = document.URL + ".json"
 
-    var jsonObject = {};
     var xhr = new XMLHttpRequest();
     xhr.open( "GET", url, true );
     xhr.onreadystatechange = function () {
@@ -44,7 +44,8 @@ GMAPS.microMap = function() {
   function createMarker(Name, Title, Content, Latitude, Longitude) {
 
     var position = new google.maps.LatLng(Latitude, Longitude);
-    contentString = "<h4>" + Name.bold() + "</h4>" + "<br />" + Title.bold() + "<br />" + Content;
+    contentString = "<h4>" + Name.bold() + "</h4>" + "<br />" + Title.bold() +
+                    + "<br />" + Content;
 
     var marker = new google.maps.Marker({
       position: position,

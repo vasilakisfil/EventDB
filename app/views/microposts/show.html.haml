@@ -1,4 +1,6 @@
 - provide(:title, @micropost.title)
+- content_for :specific_scripts do
+  = javascript_include_tag "micro_map.js"
 .microposts_page
   .row
     .span6.offset3

@@ -13,7 +13,7 @@ namespace :db do
     admin.toggle!(:admin)
     20.times do |n|
       name  = Faker::Name.name
-      email = "example-#{n+1}@railstutorial.org"
+      email = Faker::Internet.email
       username = "exampleuser#{n+1}"
       password  = "password"
       User.create!(name: name,
@@ -23,15 +23,12 @@ namespace :db do
                    password_confirmation: password)
     end
     users = User.all(limit: 6)
-    50.times do
-      title = "The title"
-      lat = rand(0..1.8)*100 - 90
-      lon = rand(0..3.60)*100 -180
-      content = Faker::Lorem.sentence(5)
+    5.times do
+      title = "The Title"
       users.each { |user| user.microposts.create!(title: title,
-                                                  content: content,
-                                                  lat: lat,
-                                                  lon: lon) }
+                                                 content: Faker::Lorem.sentence(10),
+                                                  lat: Faker::Address.latitude,
+                                                  lon: Faker::Address.longitude) }
     end
   end
 end

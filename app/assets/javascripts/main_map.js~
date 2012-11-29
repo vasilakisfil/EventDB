@@ -33,7 +33,7 @@ GMAPS.mainMap = function() {
               };
             })(jsonObject[i].name, jsonObject[i].microposts[j].title,
                jsonObject[i].microposts[j].content,
-               jsonObject[i].microposts[j].lat,
+               jsonObject[i].microposts[j].lat;,
                jsonObject[i].microposts[j].lon)();
           }
         }

@@ -15,7 +15,7 @@ GMAPS.miniMap = function() {
       scaleControl: true,
       streetViewControl: true,
       overviewMapControl: true,
-      scrollwheel: false,
+      scrollwheel: true,
       center: new google.maps.LatLng(37.975327,23.728701),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });

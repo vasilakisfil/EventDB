@@ -46,22 +46,22 @@ as a result they are featured in the map.
 
 
 # For Developers
-EventDB was built following the process of Test Driven Development(TDD), that is test
+EventDB was built following the process of Test Driven Development(TDD); that is, test
 almost everything. The code is written using Ruby on Rails framework with a couple
-more tools in order to facilitate the development:
+of tools more in order to facilitate the development:
 
 **Rspec** and **Capybara** for test driven development inside the Rails
 
 **Jasmine** for test driven development in the javascript section
 
-**SASS** (Syntactically Awesome Stylesheets) which is a CSS metalanguage offering a bunge of
-feature CSS don't have such as nesting, variables, functions, mixins and much more..
+**SASS** (Syntactically Awesome Stylesheets) which is a CSS metalanguage offering a bunch of
+features CSS doesn't have, such as nesting, variables, functions, mixins and much more..
 
 **Twitter Bootstrap** framework in order to flavor the markup
 
 **HAML**  is used as markup language instead of eRuby that is included in rails in the next few commits.
 
-**Strictly Unibtrusive** javascript and AJAX because otherwise things can get really ugnly. Also Modular Pattern is used
+**Strictly Unibtrusive** javascript and AJAX because otherwise things can get really ugnly. Also the Modular Pattern is used
 followed by [this](http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth) post.
 
 **JSON** is used in order to pass data from ruby to javascript and back.
